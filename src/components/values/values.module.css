@@ -1,0 +1,243 @@
+.values {
+  height: 92.5rem;
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-border-divider);
+  }
+
+  .title {
+    margin-top: 12.5rem;
+    margin-bottom: 6rem;
+
+    font-size: var(--font-size-46);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-heading);
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 27.8rem;
+
+    &:nth-child(odd) {
+      border-right: 1px solid var(--color-border-divider);
+    }
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      &::after {
+        content: '';
+        position: absolute;
+        left: -100vw;
+        right: -100vw;
+        bottom: 0;
+
+        height: 1px;
+        background-color: var(--color-border-divider);
+      }
+    }
+
+    &:nth-child(even) {
+      .content {
+        margin-left: 7.4rem;
+      }
+    }
+
+    .content {
+      display: flex;
+      gap: 7rem;
+      padding: 7rem 0;
+
+      .index {
+        font-size: 1.8rem;
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-primary-300);
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        .card-title {
+          font-size: var(--font-size-24);
+          font-weight: var(--font-weight-semibold);
+          color: var(--color-text-subheading);
+        }
+
+        .description {
+          max-width: 40rem;
+          font-size: var(--font-size-15);
+          font-weight: var(--font-weight-regular);
+          line-height: 2.8rem;
+          color: var(--color-text-body-muted);
+          text-wrap: balance;
+        }
+      }
+    }
+
+    .media {
+      position: relative;
+      width: 27.4rem;
+      height: 27.8rem;
+      flex-shrink: 0;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 27.4rem 27.8rem;
+    }
+  }
+
+  .diamond {
+    .media {
+      background-image: url('/values/diamond/bg-1920.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 27.4rem 27.8rem;
+    }
+
+    .media::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+
+      background-image: url('/values/ellipse.svg'), url('/values/ellipse.svg');
+      background-repeat: no-repeat;
+      background-position:
+        8rem 7rem,
+        15rem 13rem;
+      background-size:
+        4rem 4rem,
+        6rem 6rem;
+    }
+
+    .media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/values/diamond/diamond.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10rem 10rem;
+    }
+  }
+
+  .tooth {
+    .media {
+      background-image: url('/values/tooth/bg-1920.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 27.4rem 27.8rem;
+    }
+
+    .media::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+
+      background-image: url('/values/ellipse.svg'), url('/values/ellipse.svg');
+      background-repeat: no-repeat;
+      background-position:
+        15rem 6rem,
+        7rem 15rem;
+      background-size:
+        6rem 6rem,
+        4rem 4rem;
+    }
+
+    .media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        url('/values/tooth/tooth-line.svg'), url('/values/tooth/tooth.svg');
+      background-repeat: no-repeat;
+      background-position:
+        11.5rem 10.5rem,
+        center;
+      background-size:
+        2rem 2rem,
+        10rem 10rem;
+    }
+  }
+
+  .microscope {
+    .media {
+      background-image: url('/values/microscope/bg-1920.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 27.4rem 27.8rem;
+    }
+
+    .media::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+
+      background-image: url('/values/ellipse.svg'), url('/values/ellipse.svg');
+      background-repeat: no-repeat;
+      background-position:
+        7rem 6rem,
+        16rem 16rem;
+      background-size:
+        7rem 7rem,
+        4rem 4rem;
+    }
+
+    .media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/values/microscope/microscope.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10rem 10rem;
+    }
+  }
+
+  .bear {
+    .media {
+      background-image: url('/values/bear/bg-1920.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 27.4rem 27.8rem;
+    }
+
+    .media::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+
+      background-image: url('/values/ellipse.svg'), url('/values/ellipse.svg');
+      background-repeat: no-repeat;
+      background-position:
+        8rem 8rem,
+        14rem 16rem;
+      background-size:
+        5rem 5rem,
+        4rem 4rem;
+    }
+
+    .media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/values/bear/bear.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10rem 10rem;
+    }
+  }
+}

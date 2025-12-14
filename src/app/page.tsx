@@ -1,5 +1,9 @@
-import styles from './page.module.css';
+import { Values } from '@/components/values/values';
 
 export default function Home() {
-  return <div className={styles.page}></div>;
+  return (
+    <>
+      <Values />
+    </>
+  );
 }
