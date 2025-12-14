@@ -1,0 +1,106 @@
+.header {
+  > .top {
+    border-bottom: 1px solid var(--color-border-subtle);
+
+    .top-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4.6rem;
+
+      > .accessibility,
+      > .max-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        font-size: var(--font-size-13);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-primary-600);
+      }
+    }
+  }
+
+  > .main {
+    border-bottom: 1px solid var(--color-border-default);
+    font-weight: var(--font-weight-semibold);
+
+    .main-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 10rem;
+      gap: 9rem;
+
+      > .left {
+        display: flex;
+        align-items: center;
+        gap: 10em;
+
+        .nav-list {
+          display: flex;
+          align-items: center;
+          gap: 2.8rem;
+
+          a {
+            display: inline-flex;
+            align-items: end;
+            gap: 0.6rem;
+
+            font-size: var(--font-size-15);
+            color: var(--color-primary-800);
+          }
+
+          > .nav-item-primary {
+            margin-right: 7.2rem;
+          }
+        }
+
+        .promo {
+          position: relative;
+
+          .point {
+            position: absolute;
+            top: -0.3rem;
+            right: -0.6rem;
+
+            width: 0.4rem;
+            height: 0.4rem;
+            background-color: var(--color-primary-300);
+            border-radius: 50%;
+          }
+        }
+      }
+
+      > .right {
+        display: flex;
+        align-items: center;
+        gap: 2.6rem;
+
+        > .phone {
+          font-size: var(--font-size-15);
+          color: var(--color-primary-800);
+        }
+
+        > .search {
+          display: flex;
+        }
+
+        > .appointment {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.8rem;
+          height: 6.4rem;
+          width: 17.6rem;
+
+          font-size: var(--font-size-15);
+          font-weight: var(--font-weight-bold);
+          color: var(--color-btn-primary-text);
+          background-color: var(--color-btn-primary-bg);
+          border-radius: 6rem;
+        }
+      }
+    }
+  }
+}

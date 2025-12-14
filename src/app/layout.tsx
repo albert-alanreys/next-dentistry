@@ -3,6 +3,8 @@ import { Manrope } from 'next/font/google';
 
 import '../styles/globals.css';
 
+import { Header } from '@/components';
+
 const manrope = Manrope({
   subsets: ['latin', 'cyrillic'],
   weight: ['300', '400', '500', '600', '700', '800'],
@@ -21,12 +23,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang='ru' className={manrope.variable}>
-      <body className='antialiased'>{children}</body>
+      <body className='antialiased'>
+        <Header />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

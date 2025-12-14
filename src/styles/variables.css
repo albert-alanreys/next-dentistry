@@ -21,8 +21,8 @@
   --color-text-base: #5a5857;
   --color-text-heading: var(--color-primary-900);
   --color-text-subheading: #202020;
-  --color-text-body: rgba(var(--color-text-base), 0.87);
-  --color-text-body-muted: rgba(var(--color-text-base), 0.64);
+  --color-text-body: rgba(90, 88, 87, 0.87);
+  --color-text-body-muted: rgba(90, 88, 87, 0.64);
   --color-text-caption: var(--color-primary-500);
 
   /* Text on Dark Background */
@@ -108,14 +108,8 @@
   --bp-sm: 375px;
 
   /* ============ CONTAINER WIDTHS ============ */
-  --container-xxl: 1600px;
-  --container-xl: 1176px;
-  --container-md: 688px;
-  --container-sm: 343px;
-
-  /* ============ CONTAINER PADDING ============ */
-  --container-padding-xxl: 160px;
-  --container-padding-xl: 52px;
-  --container-padding-md: 40px;
-  --container-padding-sm: 16px;
+  --container-xxl: 1620px;
+  --container-xl: 1200px;
+  --container-md: 700px;
+  --container-sm: 350px;
 }

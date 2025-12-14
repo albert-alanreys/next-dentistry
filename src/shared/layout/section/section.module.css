@@ -1,0 +1,30 @@
+.section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.background-default {
+  background-color: var(--color-background-body);
+}
+
+.background-alt {
+  background-color: var(--color-background-surface);
+}
+
+.background-dark {
+  background-color: var(--color-background-dark);
+}
+
+@media (max-width: var(--bp-md)) {
+  .section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (max-width: var(--bp-sm)) {
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
