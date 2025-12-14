@@ -1,24 +1,37 @@
 {
   "name": "next-dentistry",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "Next.js project for a dentistry website",
+  "author": "Albert Alan-Reys",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "lint:styles": "stylelint **/*.css",
+    "lint:styles:fix": "stylelint **/*.css --fix"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "next": "16.0.10",
     "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "react-dom": "19.2.1",
+    "react-hook-form": "^7.68.0"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.7.4",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-order": "^7.0.0",
     "typescript": "^5"
   }
 }
