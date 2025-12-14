@@ -99,6 +99,10 @@
           color: var(--color-btn-primary-text);
           background-color: var(--color-btn-primary-bg);
           border-radius: 6rem;
+
+          &:hover {
+            background-color: var(--color-btn-primary-hover);
+          }
         }
       }
     }

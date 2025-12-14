@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { Container } from '@/shared/layout';
+import { Container } from '../container/container';
 
 import styles from './header.module.css';
 

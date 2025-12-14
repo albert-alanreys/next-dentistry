@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { Container } from '@/shared/layout';
+import { Container } from '../container/container';
 
 import styles from './values.module.css';
 
