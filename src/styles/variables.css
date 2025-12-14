@@ -1,0 +1,121 @@
+:root {
+  /* ============ BRAND COLOR PALETTE ============ */
+
+  /* Primary Palette - main brand colors */
+  --color-primary-900: #2a2620;
+  --color-primary-800: #474031;
+  --color-primary-700: #544b46;
+  --color-primary-600: #887b61;
+  --color-primary-500: #b2a487;
+  --color-primary-400: #bca489;
+  --color-primary-300: #d4b496;
+
+  /* Neutral Palette - grays and whites */
+  --color-neutral-300: #ece8e3;
+  --color-neutral-200: #f5f0ec;
+  --color-neutral-100: #ffffff;
+
+  /* ============ SEMANTIC COLOR SYSTEM ============ */
+
+  /* Text Colors */
+  --color-text-base: #5a5857;
+  --color-text-heading: var(--color-primary-900);
+  --color-text-subheading: #202020;
+  --color-text-body: rgba(var(--color-text-base), 0.87);
+  --color-text-body-muted: rgba(var(--color-text-base), 0.64);
+  --color-text-caption: var(--color-primary-500);
+
+  /* Text on Dark Background */
+  --color-text-on-dark: var(--color-neutral-100);
+  --color-text-on-dark-muted: rgba(255, 255, 255, 0.62);
+  --color-text-on-dark-subtle: rgba(255, 255, 255, 0.32);
+
+  /* Background Colors */
+  --color-background-body: var(--color-neutral-100);
+  --color-background-surface: var(--color-neutral-200);
+  --color-background-alt: var(--color-neutral-300);
+  --color-background-dark: var(--color-primary-700);
+
+  /* Borders & Dividers */
+  --color-border-default: var(--color-neutral-300);
+  --color-border-subtle: var(--color-neutral-200);
+  --color-border-divider: rgba(229, 228, 217, 0.72);
+  --color-border-on-dark: rgba(255, 255, 255, 0.3);
+
+  /* Buttons */
+  --color-btn-primary-bg: var(--color-primary-700);
+  --color-btn-primary-text: var(--color-neutral-100);
+  --color-btn-primary-hover: color-mix(
+    in srgb,
+    var(--color-primary-700) 90%,
+    black
+  );
+
+  --color-btn-secondary-bg: var(--color-neutral-100);
+  --color-btn-secondary-text: #3a3429;
+  --color-btn-secondary-border: var(--color-primary-700);
+
+  --color-btn-tertiary-bg: transparent;
+  --color-btn-tertiary-text: var(--color-primary-600);
+
+  /* Links */
+  --color-link: var(--color-primary-600);
+  --color-link-hover: var(--color-primary-700);
+  --color-link-active: var(--color-primary-800);
+
+  /* Form Elements */
+  --color-form-label: rgba(223, 222, 221, 0.33);
+  --color-form-placeholder: #dfdedd;
+  --color-form-border: rgba(255, 255, 255, 0.3);
+  --color-form-background: transparent;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* ============ TYPOGRAPHY SYSTEM ============ */
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Font Sizes in REM (1rem = 10px) */
+  --font-size-13: 1.3rem;
+  --font-size-14: 1.4rem;
+  --font-size-15: 1.5rem;
+  --font-size-16: 1.6rem;
+  --font-size-20: 2rem;
+  --font-size-24: 2.4rem;
+  --font-size-46: 4.6rem;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.01em;
+
+  /* ============ BREAKPOINTS ============ */
+  --bp-xxl: 1920px;
+  --bp-xl: 1280px;
+  --bp-md: 768px;
+  --bp-sm: 375px;
+
+  /* ============ CONTAINER WIDTHS ============ */
+  --container-xxl: 1600px;
+  --container-xl: 1176px;
+  --container-md: 688px;
+  --container-sm: 343px;
+
+  /* ============ CONTAINER PADDING ============ */
+  --container-padding-xxl: 160px;
+  --container-padding-xl: 52px;
+  --container-padding-md: 40px;
+  --container-padding-sm: 16px;
+}
