@@ -59,6 +59,7 @@
         font-size: 1.8rem;
         font-weight: var(--font-weight-semibold);
         color: var(--color-primary-300);
+        line-height: 1.55;
       }
 
       .text {
@@ -239,5 +240,445 @@
       background-position: center;
       background-size: 10rem 10rem;
     }
+  }
+}
+
+@media (max-width: 1700px) {
+  .values {
+    .title {
+      margin-top: 7.5rem;
+      margin-bottom: 5rem;
+      font-size: var(--font-size-40);
+    }
+
+    .card {
+      height: 22.4rem;
+
+      &:nth-child(odd) {
+        border-right: 1px solid var(--color-border-divider);
+      }
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        &::after {
+          content: '';
+          position: absolute;
+          left: -100vw;
+          right: -100vw;
+          bottom: 0;
+
+          height: 1px;
+          background-color: var(--color-border-divider);
+        }
+      }
+
+      &:nth-child(even) {
+        .content {
+          margin-left: 4rem;
+        }
+      }
+
+      .content {
+        gap: 5rem;
+        padding: 4rem 0;
+
+        .text {
+          gap: 1.5rem;
+
+          .card-title {
+            font-size: var(--font-size-20);
+          }
+        }
+      }
+
+      .media {
+        width: 20rem;
+        height: 22.4rem;
+        background-size: 20rem 22.4rem;
+      }
+    }
+
+    .diamond,
+    .tooth,
+    .microscope,
+    .bear {
+      .media {
+        background-image: url('/values/bg-1280.svg');
+        background-size: 20rem 24rem;
+      }
+    }
+
+    .diamond {
+      .media::before {
+        background-position:
+          4rem 4rem,
+          12rem 10rem;
+      }
+
+      .media::after {
+        background-size: 8rem 8rem;
+      }
+    }
+
+    .tooth {
+      .media::before {
+        background-position:
+          10rem 4rem,
+          4rem 13rem;
+      }
+
+      .media::after {
+        background-position:
+          8rem 8rem,
+          center;
+        background-size:
+          2rem 2rem,
+          8rem 8rem;
+      }
+    }
+
+    .microscope {
+      .media::before {
+        background-position:
+          3rem 4rem,
+          10rem 14rem;
+      }
+
+      .media::after {
+        background-size: 8rem 8rem;
+      }
+    }
+
+    .bear {
+      .media::before {
+        background-position:
+          4rem 5rem,
+          12rem 14rem;
+      }
+
+      .media::after {
+        background-size: 8rem 8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .values {
+    .title {
+      margin-top: 6rem;
+      margin-bottom: 5rem;
+      font-size: var(--font-size-36);
+    }
+
+    .list {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+      flex-direction: column;
+      height: auto;
+      min-height: 3.4rem;
+
+      &:nth-child(even) {
+        .content {
+          margin-left: 4rem;
+        }
+      }
+
+      .content {
+        gap: 3.9rem;
+        padding-top: 4.4rem;
+        padding-bottom: 2rem;
+        padding-right: 2rem;
+
+        .index {
+          line-height: 1.3;
+        }
+
+        .text {
+          gap: 1.3rem;
+
+          .card-title {
+            font-size: var(--font-size-18);
+          }
+
+          .description {
+            max-width: none;
+            font-size: var(--font-size-14);
+          }
+        }
+      }
+
+      .media {
+        width: 100%;
+        max-width: 31.8rem;
+        height: 13.7rem;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url('/values/bg-768.svg');
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .diamond,
+    .tooth,
+    .microscope,
+    .bear {
+      .media {
+        &::before,
+        &::after {
+          background-position: center;
+          background-size: contain;
+        }
+      }
+    }
+
+    .diamond {
+      .media::before {
+        background-position:
+          7rem 1rem,
+          18rem 4rem;
+        background-size:
+          7rem 7rem,
+          5rem 5rem;
+      }
+
+      .media::after {
+        background-size: 7rem 7rem;
+      }
+    }
+
+    .tooth {
+      .media::before {
+        background-position:
+          17rem 1rem,
+          6rem 5rem;
+        background-size:
+          5rem 5rem,
+          7rem 7rem;
+      }
+
+      .media::after {
+        background-position:
+          14rem 4.5rem,
+          center;
+        background-size:
+          2rem 1rem,
+          7rem 7rem;
+      }
+    }
+
+    .microscope {
+      .media::before {
+        background-position:
+          5rem 8rem,
+          17rem 2rem;
+        background-size:
+          4rem 4rem,
+          6rem 6rem;
+      }
+
+      .media::after {
+        background-size: 7rem 7rem;
+      }
+    }
+
+    .bear {
+      .media::before {
+        background-position:
+          17rem 2rem,
+          5rem 4rem;
+        background-size:
+          5rem 5rem,
+          7rem 7rem;
+      }
+
+      .media::after {
+        background-size: 7rem 7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .values {
+    .title {
+      margin-top: 7rem;
+      margin-bottom: 3rem;
+      font-size: var(--font-size-28);
+    }
+
+    .card {
+      padding-bottom: 4rem;
+
+      &:nth-child(odd) {
+        border-right: none;
+      }
+
+      .content {
+        padding: 3rem 2rem 2rem 2rem;
+        gap: 2.5rem;
+        order: 0;
+
+        .index {
+          font-size: var(--font-size-16);
+          line-height: 1.3;
+        }
+
+        .text {
+          gap: 1.3rem;
+
+          .card-title {
+            font-size: var(--font-size-16);
+          }
+
+          .description {
+            max-width: none;
+            font-size: var(--font-size-14);
+          }
+        }
+      }
+
+      .media {
+        order: 1;
+        max-width: 31rem;
+        height: 16rem;
+        background-image: url('/values/bg-375.svg');
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .diamond,
+    .tooth,
+    .microscope,
+    .bear {
+      .media {
+        &::before,
+        &::after {
+          background-position: center;
+          background-size: contain;
+        }
+      }
+    }
+
+    .diamond {
+      .media::before {
+        background-position:
+          10rem 1rem,
+          18rem 8rem;
+        background-size:
+          7rem 7rem,
+          5rem 5rem;
+      }
+
+      .media::after {
+        background-size: 7rem 7rem;
+      }
+    }
+
+    .tooth {
+      .media::before {
+        background-position:
+          17rem 1rem,
+          6rem 5rem;
+        background-size:
+          5rem 5rem,
+          7rem 7rem;
+      }
+
+      .media::after {
+        background-position:
+          13.5rem 5.5rem,
+          center;
+        background-size:
+          2rem 1rem,
+          7rem 7rem;
+      }
+    }
+
+    .microscope {
+      .media::before {
+        background-position:
+          5rem 8rem,
+          17rem 2rem;
+        background-size:
+          4rem 4rem,
+          6rem 6rem;
+      }
+
+      .media::after {
+        background-size: 7rem 7rem;
+      }
+    }
+
+    .bear {
+      .media::before {
+        background-position:
+          16rem 3rem,
+          7rem 8rem;
+        background-size:
+          5rem 5rem,
+          7rem 7rem;
+      }
+
+      .media::after {
+        background-size: 7rem 7rem;
+      }
+    }
+
+    .progress-bar {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10.2rem;
+      height: 0.4rem;
+      background-image: url('/values/progress.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    :global(.swiper) {
+      padding-bottom: 3rem;
+    }
+
+    :global(.swiper-pagination) {
+      bottom: 1rem !important;
+    }
+
+    :global(.swiper-pagination-bullet) {
+      width: 0.8rem !important;
+      height: 0.8rem !important;
+      background-color: var(--color-primary-100) !important;
+      opacity: 1 !important;
+      margin: 0 0.4rem !important;
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+      width: 1rem !important;
+      height: 1rem !important;
+      background-color: var(--color-primary-500) !important;
+    }
+  }
+}
+
+.desktop-version {
+  display: block;
+}
+
+.mobile-version {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .desktop-version {
+    display: none;
+  }
+
+  .mobile-version {
+    display: block;
   }
 }

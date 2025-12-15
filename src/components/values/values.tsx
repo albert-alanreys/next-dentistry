@@ -1,4 +1,10 @@
+'use client';
+
 import clsx from 'clsx';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Container } from '../container/container';
 
@@ -44,24 +50,58 @@ export const Values = () => {
 
       <div className={styles.divider} />
 
-      <Container>
-        <ul className={styles.list}>
-          {VALUES.map(({ id, title, description, variant }) => (
-            <li key={id} className={clsx(styles.card, styles[variant])}>
-              <div className={styles.content}>
-                <span className={styles.index}>{id}</span>
+      <div className={styles['desktop-version']}>
+        <Container>
+          <ul className={styles.list}>
+            {VALUES.map(({ id, title, description, variant }) => (
+              <li key={id} className={clsx(styles.card, styles[variant])}>
+                <div className={styles.content}>
+                  <span className={styles.index}>{id}</span>
 
-                <div className={styles.text}>
-                  <h3 className={styles['card-title']}>{title}</h3>
-                  <p className={styles.description}>{description}</p>
+                  <div className={styles.text}>
+                    <h3 className={styles['card-title']}>{title}</h3>
+                    <p className={styles.description}>{description}</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className={styles.media} />
-            </li>
-          ))}
-        </ul>
-      </Container>
+                <div className={styles.media} />
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </div>
+
+      <div className={styles['mobile-version']}>
+        <Container>
+          <Swiper
+            modules={[Pagination]}
+            pagination={{
+              clickable: true,
+              renderBullet: function (index, className) {
+                return `<span class="${className}"></span>`;
+              },
+            }}
+            spaceBetween={20}
+            slidesPerView={1}
+            className={styles.swiper}
+          >
+            {VALUES.map(({ id, title, description, variant }) => (
+              <SwiperSlide key={id}>
+                <div className={clsx(styles.card, styles[variant])}>
+                  <div className={styles.media} />
+                  <div className={styles.content}>
+                    <span className={styles.index}>{id}</span>
+                    <div className={styles.text}>
+                      <h3 className={styles['card-title']}>{title}</h3>
+                      <p className={styles.description}>{description}</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Container>
+      </div>
     </section>
   );
 };
