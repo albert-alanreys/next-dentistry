@@ -2,7 +2,7 @@
   min-height: 63.8rem;
   padding: 15rem 0 8rem;
 
-  background-image: url('/footer-bg-1920.svg');
+  background-image: url('/footer/footer-bg-1920.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -14,24 +14,24 @@
     gap: 8rem;
     align-items: start;
 
-    > .left {
+    .left {
       display: flex;
       flex-direction: column;
       gap: 12.6rem;
 
-      > .title {
+      .title {
         max-width: 40rem;
         font-size: var(--font-size-46);
         font-weight: var(--font-weight-semibold);
         color: var(--color-text-on-dark);
         line-height: 1.4;
 
-        > span {
+        span {
           display: block;
         }
       }
 
-      > .description {
+      .description {
         max-width: 40rem;
         text-wrap: balance;
         font-size: var(--font-size-16);
@@ -41,9 +41,82 @@
       }
     }
 
-    > .right {
+    .right {
       display: flex;
       justify-content: flex-end;
     }
+  }
+}
+
+@media (max-width: 1700px) {
+  .footer {
+    .content {
+      .left {
+        .title {
+          font-size: var(--font-size-40);
+        }
+
+        .description {
+          font-size: var(--font-size-15);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .footer {
+    min-height: auto;
+    padding: 8rem 0 6rem;
+    background-image: url('/footer/footer-bg-1280.svg');
+
+    .content {
+      grid-template-columns: 1fr;
+      gap: 6rem;
+
+      .left {
+        gap: 3rem;
+
+        .title {
+          max-width: 100%;
+          font-size: var(--font-size-36);
+        }
+
+        .description {
+          max-width: 80rem;
+          font-size: var(--font-size-14);
+        }
+      }
+
+      .right {
+        justify-content: stretch;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 6rem 0 4rem;
+    background-image: url('/footer/footer-bg-768px.svg');
+
+    .content {
+      gap: 3.5rem;
+
+      .left {
+        gap: 2rem;
+
+        .title {
+          font-size: 3.2rem;
+          font-size: var(--font-size-28);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .footer {
+    background-image: url('/footer/footer-bg-375.svg');
   }
 }

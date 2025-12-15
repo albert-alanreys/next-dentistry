@@ -4,16 +4,16 @@
   gap: 4rem;
   width: 100%;
 
-  > .row {
+  .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 
-    > .field {
+    .field {
       display: flex;
       flex-direction: column;
 
-      > .label {
+      .label {
         position: relative;
         top: 0.5rem;
         font-size: var(--font-size-14);
@@ -22,7 +22,7 @@
         line-height: 1.26;
       }
 
-      > .input {
+      .input {
         width: 100%;
         padding: 2rem 0;
 
@@ -66,10 +66,10 @@
         }
       }
 
-      > .error {
+      .error {
         display: block;
         margin-top: 1rem;
-        font-size: 1.3rem;
+        font-size: var(--font-size-13);
         font-weight: var(--font-weight-regular);
         color: #ff6b6b;
         line-height: 1.4;
@@ -81,14 +81,14 @@
     }
   }
 
-  > .footer {
+  .footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 4.5rem;
     margin-top: 1.4rem;
 
-    > .submit {
+    .submit {
       padding: 1.6rem 3.2rem;
       flex-shrink: 0;
 
@@ -118,14 +118,14 @@
       }
     }
 
-    > .consent {
+    .consent {
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
       gap: 1rem;
       flex: 1;
 
-      > .checkbox {
+      .checkbox {
         appearance: none;
         width: 1.8rem;
         height: 1.8rem;
@@ -139,28 +139,28 @@
         position: relative;
         transition: all 0.3s ease;
 
-        &:checked::after {
-          content: '';
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-
-          width: 1.2rem;
-          height: 1.2rem;
-
-          background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3L4.5 8.5L2 6' stroke='%23544B46' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-        }
-
         &:checked {
           background-color: var(--color-neutral-100);
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 1.2rem;
+            height: 1.2rem;
+
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3L4.5 8.5L2 6' stroke='%23544B46' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+          }
         }
       }
 
-      > .consent-label {
+      .consent-label {
         max-width: 45rem;
         font-size: var(--font-size-14);
         font-weight: var(--font-weight-regular);
@@ -170,15 +170,85 @@
         flex: 1;
       }
 
-      > .error {
+      .error {
         display: block;
         width: 100%;
 
         margin-left: 2.8rem;
-        font-size: 1.3rem;
+        font-size: var(--font-size-13);
         font-weight: var(--font-weight-regular);
         color: #ff6b6b;
         line-height: 1.4;
+      }
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  .form {
+    .footer {
+      .consent {
+        .consent-label {
+          font-size: var(--font-size-13);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .form {
+    .row {
+      .field {
+        .input {
+          font-size: var(--font-size-15);
+        }
+      }
+    }
+
+    .footer {
+      .submit {
+        font-size: var(--font-size-14);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .form {
+    gap: 2rem;
+
+    .row {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      .field {
+        .input {
+          font-size: var(--font-size-14);
+        }
+      }
+    }
+
+    .footer {
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 0;
+
+      .submit {
+        order: 1;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 2rem;
+        font-size: var(--font-size-13);
+      }
+
+      .consent {
+        order: 2;
+        width: 100%;
+
+        .consent-label {
+          max-width: 100%;
+        }
       }
     }
   }

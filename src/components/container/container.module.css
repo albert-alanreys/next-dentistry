@@ -1,24 +1,52 @@
 .container {
   width: 100%;
-  max-width: var(--container-xxl);
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
-@media (max-width: calc(var(--bp-xl) - 1px)) {
+@media (min-width: 1701px) {
+  .container {
+    max-width: var(--container-xxl);
+  }
+}
+
+@media (max-width: 1700px) {
+  .container {
+    max-width: 100%;
+    padding-inline: var(--container-padding-xl);
+  }
+}
+
+@media (min-width: 1249px) and (max-width: 1280px) {
   .container {
     max-width: var(--container-xl);
+    padding-inline: 0;
   }
 }
 
-@media (max-width: calc(var(--bp-md) - 1px)) {
+@media (max-width: 1248px) {
+  .container {
+    max-width: 100%;
+    padding-inline: var(--container-padding-md);
+  }
+}
+
+@media (min-width: 733px) and (max-width: 768px) {
   .container {
     max-width: var(--container-md);
+    padding-inline: 0;
   }
 }
 
-@media (max-width: calc(var(--bp-sm) - 1px)) {
+@media (max-width: 732px) {
+  .container {
+    max-width: 100%;
+    padding-inline: var(--container-padding-sm);
+  }
+}
+
+@media (max-width: 375px) {
   .container {
     max-width: var(--container-sm);
+    padding-inline: 0;
   }
 }
