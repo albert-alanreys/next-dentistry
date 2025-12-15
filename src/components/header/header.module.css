@@ -1,3 +1,52 @@
+.menu-panel {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 32rem;
+  max-width: 85vw;
+  height: 100%;
+  padding: 2.4rem;
+  box-shadow: -0.4rem 0 2.4rem rgb(0 0 0 / 10%);
+  margin-left: auto;
+  background-color: white;
+  overflow-y: auto;
+
+  .close-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 3.2rem;
+    padding: 0.8rem 0;
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary-800);
+    cursor: pointer;
+  }
+
+  .menu-nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+
+      a {
+        display: block;
+        padding: 0.8rem 0;
+        font-size: var(--font-size-14);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-primary-800);
+        transition: color 0.2s;
+
+        &:hover {
+          color: var(--color-primary-600);
+        }
+      }
+    }
+  }
+}
+
 .header {
   > .top {
     border-bottom: 1px solid var(--color-border-subtle);
@@ -13,7 +62,6 @@
         display: inline-flex;
         align-items: center;
         gap: 0.8rem;
-
         font-size: var(--font-size-13);
         font-weight: var(--font-weight-semibold);
         color: var(--color-primary-600);
@@ -29,13 +77,29 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 10rem;
       gap: 9rem;
+      height: 10rem;
 
       > .left {
         display: flex;
         align-items: center;
-        gap: 10em;
+        gap: 10rem;
+
+        > img {
+          content: url('/header/logo-big.svg');
+          width: 260px;
+          height: 42px;
+        }
+
+        > .hamburger-big,
+        .hamburger-small {
+          display: none;
+          cursor: pointer;
+        }
+
+        > .appointment-mobile {
+          display: none;
+        }
 
         .nav-list {
           display: flex;
@@ -46,7 +110,6 @@
             display: inline-flex;
             align-items: end;
             gap: 0.6rem;
-
             font-size: var(--font-size-15);
             color: var(--color-primary-800);
           }
@@ -63,7 +126,6 @@
             position: absolute;
             top: -0.3rem;
             right: -0.6rem;
-
             width: 0.4rem;
             height: 0.4rem;
             background-color: var(--color-primary-300);
@@ -88,23 +150,190 @@
 
         > .appointment {
           display: inline-flex;
-          align-items: center;
           justify-content: center;
+          align-items: center;
           gap: 0.8rem;
+          min-width: 17.6rem;
           height: 6.4rem;
-          width: 17.6rem;
-
           font-size: var(--font-size-15);
           font-weight: var(--font-weight-bold);
           color: var(--color-btn-primary-text);
-          background-color: var(--color-btn-primary-bg);
           border-radius: 6rem;
-
           transition: background-color 0.3s ease;
+          background-color: var(--color-btn-primary-bg);
 
           &:hover {
             background-color: var(--color-btn-primary-hover);
           }
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 1700px) {
+  .header {
+    > .main {
+      .main-inner {
+        gap: 4.4rem;
+        height: 9rem;
+
+        > .left {
+          gap: 4.2rem;
+
+          > img {
+            content: url('/header/logo-small.svg');
+            width: 154px;
+            height: 40px;
+          }
+
+          .nav-list {
+            gap: 2rem;
+
+            a {
+              font-size: var(--font-size-14);
+            }
+
+            > .nav-item-primary {
+              margin-right: 0;
+            }
+          }
+        }
+
+        > .right {
+          gap: 1.8rem;
+
+          > .phone {
+            font-size: var(--font-size-14);
+          }
+
+          > .appointment {
+            min-width: 15.3rem;
+            height: 6rem;
+            font-size: var(--font-size-14);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 1279px) {
+  .header {
+    > .main {
+      .main-inner {
+        position: relative;
+        gap: 0;
+        height: 7.4rem;
+
+        > .left {
+          flex-grow: 1;
+          justify-content: space-between;
+
+          .appointment-mobile {
+            display: inline-flex;
+
+            > .appointment {
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              gap: 0.8rem;
+              min-width: 15.3rem;
+              height: 5.4rem;
+              font-size: var(--font-size-14);
+              font-weight: var(--font-weight-bold);
+              color: var(--color-btn-primary-text);
+              border-radius: 6rem;
+              transition: background-color 0.3s ease;
+              background-color: var(--color-btn-primary-bg);
+
+              &:hover {
+                background-color: var(--color-btn-primary-hover);
+              }
+            }
+          }
+
+          .hamburger-big {
+            display: flex;
+          }
+
+          .nav {
+            display: none;
+          }
+        }
+
+        > .right {
+          > .phone {
+            display: none;
+          }
+
+          > img {
+            display: none;
+          }
+
+          > .search {
+            position: absolute;
+            right: 17rem;
+          }
+
+          button.appointment {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 767px) {
+  .header {
+    > .top {
+      .top-inner {
+        height: 4.2rem;
+
+        > .accessibility,
+        > .max-link {
+          font-size: var(--font-size-12);
+        }
+      }
+    }
+
+    > .main {
+      height: 8rem;
+
+      .main-inner {
+        position: relative;
+        height: 7.8rem;
+
+        > .left {
+          flex-grow: 1;
+          justify-content: space-between;
+          gap: 2.5rem;
+
+          > img {
+            width: 134px;
+            height: 36px;
+          }
+
+          .appointment-mobile {
+            > .appointment {
+              min-width: 13.9rem;
+              height: 4.8rem;
+              font-size: var(--font-size-13);
+            }
+          }
+
+          .hamburger-big {
+            display: none;
+          }
+
+          .hamburger-small {
+            display: flex;
+          }
+        }
+
+        > .right {
+          display: none;
         }
       }
     }

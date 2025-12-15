@@ -7,8 +7,8 @@
     .title {
       font-size: var(--font-size-46);
       font-weight: var(--font-weight-semibold);
-      color: var(--color-primary-900);
       line-height: 1.26;
+      color: var(--color-primary-900);
     }
   }
 
@@ -20,9 +20,9 @@
       overflow: hidden;
 
       .slide {
+        flex-shrink: 0;
         width: 40rem;
         height: auto;
-        flex-shrink: 0;
 
         .card {
           display: flex;
@@ -37,29 +37,26 @@
             margin-bottom: 4rem;
 
             .image {
+              display: block;
               width: 100%;
               height: 100%;
-              object-fit: cover;
-              display: block;
               border-radius: 1rem;
+              object-fit: cover;
             }
 
             .category-button {
               position: absolute;
-              height: 3.6rem;
-              width: 9rem;
-              border-radius: 3rem;
               top: 6rem;
               left: 50%;
-              transform: translateX(-50%);
-
-              background-color: var(--color-neutral-100);
-
+              width: 9rem;
+              height: 3.6rem;
               font-size: var(--font-size-14);
               font-weight: var(--font-weight-medium);
               color: #3a3429;
-
+              border-radius: 3rem;
               transition: background-color 0.3s ease;
+              transform: translateX(-50%);
+              background-color: var(--color-neutral-100);
 
               &:hover {
                 background-color: var(--color-neutral-200);
@@ -74,26 +71,25 @@
             .date {
               font-size: var(--font-size-14);
               font-weight: var(--font-weight-semibold);
+              line-height: 1.7;
               color: var(--color-primary-500);
               margin-bottom: 2rem;
-              line-height: 1.7;
             }
 
             .card-title {
               font-size: var(--font-size-20);
               font-weight: var(--font-weight-semibold);
-              color: var(--color-primary-900);
               line-height: 1.4;
+              color: var(--color-primary-900);
               margin-bottom: 1.4rem;
             }
 
             .excerpt {
+              display: -webkit-box;
               font-size: var(--font-size-16);
               font-weight: var(--font-weight-regular);
-              color: var(--color-text-body-muted);
               line-height: 1.7;
-
-              display: -webkit-box;
+              color: var(--color-text-body-muted);
               line-clamp: 2;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -105,25 +101,22 @@
 
     .scroll-button {
       position: absolute;
+      z-index: 10;
       top: 23.5rem;
       right: 0;
-      transform: translate(50%, -50%);
-      z-index: 10;
-
       width: 6.4rem;
       height: 6.4rem;
-
+      padding: 0;
       background: none;
       border: none;
-      cursor: pointer;
-      padding: 0;
-
       transition: opacity 0.3s ease;
+      transform: translate(50%, -50%);
+      cursor: pointer;
 
       img {
+        display: block;
         width: 100%;
         height: 100%;
-        display: block;
       }
 
       &:hover {
@@ -138,20 +131,17 @@
     margin-top: 7rem;
 
     > .all-news-button {
-      height: 6rem;
       width: 20rem;
-
-      background-color: var(--color-primary-700);
-      border: none;
-      border-radius: 5.2rem;
-      cursor: pointer;
-
+      height: 6rem;
       font-size: var(--font-size-14);
       font-weight: var(--font-weight-bold);
-      color: var(--color-neutral-100);
       line-height: 1.5;
-
+      color: var(--color-neutral-100);
+      border: none;
+      border-radius: 5.2rem;
       transition: background-color 0.3s ease;
+      background-color: var(--color-primary-700);
+      cursor: pointer;
 
       .count {
         color: var(--color-primary-400);
@@ -164,7 +154,7 @@
   }
 }
 
-@media (max-width: 1700px) {
+@media (width <= 1700px) {
   .news {
     padding: 7rem 0;
 
@@ -225,7 +215,7 @@
   }
 }
 
-@media (max-width: 1279px) {
+@media (width <= 1279px) {
   .news {
     padding: 6rem 0;
 
@@ -280,7 +270,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .news {
     padding: 7rem 0;
 

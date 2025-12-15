@@ -6,8 +6,8 @@
 
   .row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
 
     .field {
       display: flex;
@@ -18,27 +18,36 @@
         top: 0.5rem;
         font-size: var(--font-size-14);
         font-weight: var(--font-weight-medium);
-        color: var(--color-form-label);
         line-height: 1.26;
+        color: var(--color-form-label);
       }
 
       .input {
         width: 100%;
         padding: 2rem 0;
-
-        background-color: var(--color-form-background);
-        border: none;
-        border-bottom: 1px solid var(--color-form-border-default);
-
         font-size: var(--font-size-16);
         font-weight: var(--font-weight-medium);
-        color: var(--color-text-on-dark);
         line-height: 1.26;
-
+        color: var(--color-text-on-dark);
+        border: none;
         transition: border-color 0.3s ease;
+        background-color: var(--color-form-background);
+        border-bottom: 1px solid var(--color-form-border-default);
 
         &::placeholder {
           color: var(--color-form-placeholder);
+        }
+
+        &:-webkit-autofill {
+          box-shadow: 0 0 0 1000px var(--color-form-background) inset !important;
+          -webkit-text-fill-color: var(--color-text-on-dark) !important;
+          transition: background-color 5000s ease-in-out 0s;
+          caret-color: var(--color-text-on-dark);
+        }
+
+        &:-moz-autofill {
+          background-color: var(--color-form-background) !important;
+          color: var(--color-text-on-dark) !important;
         }
 
         &:hover,
@@ -46,33 +55,15 @@
           outline: none;
           border-bottom-color: var(--color-form-border-hover);
         }
-
-        &:-webkit-autofill,
-        &:-webkit-autofill:hover,
-        &:-webkit-autofill:focus,
-        &:-webkit-autofill:active {
-          -webkit-box-shadow: 0 0 0 1000px var(--color-form-background) inset !important;
-          -webkit-text-fill-color: var(--color-text-on-dark) !important;
-          transition: background-color 5000s ease-in-out 0s;
-          caret-color: var(--color-text-on-dark);
-        }
-
-        &:-moz-autofill,
-        &:-moz-autofill:hover,
-        &:-moz-autofill:focus,
-        &:-moz-autofill:active {
-          background-color: var(--color-form-background) !important;
-          color: var(--color-text-on-dark) !important;
-        }
       }
 
       .error {
         display: block;
-        margin-top: 1rem;
         font-size: var(--font-size-13);
         font-weight: var(--font-weight-regular);
-        color: var(--color-form-error);
         line-height: 1.4;
+        color: var(--color-form-error);
+        margin-top: 1rem;
       }
     }
 
@@ -89,69 +80,61 @@
     margin-top: 1.4rem;
 
     .submit {
-      padding: 1.6rem 3.2rem;
       flex-shrink: 0;
-
       width: 20rem;
       height: 6.4rem;
-
-      background-color: var(--color-neutral-100);
-      border: none;
-      border-radius: 6rem;
-      cursor: pointer;
-
+      padding: 1.6rem 3.2rem;
       font-size: var(--font-size-15);
       font-weight: var(--font-weight-bold);
-      color: var(--color-primary-700);
       line-height: 1.5;
-      white-space: nowrap;
-
+      color: var(--color-primary-700);
+      border: none;
+      border-radius: 6rem;
       transition: background-color 0.3s ease;
-
-      &:hover:not(:disabled) {
-        background-color: var(--color-neutral-200);
-      }
+      background-color: var(--color-neutral-100);
+      cursor: pointer;
+      white-space: nowrap;
 
       &:disabled {
         opacity: 0.6;
         cursor: not-allowed;
       }
+
+      &:hover:not(:disabled) {
+        background-color: var(--color-neutral-200);
+      }
     }
 
     .consent {
       display: flex;
+      flex: 1;
       flex-wrap: wrap;
       align-items: flex-start;
       gap: 1rem;
-      flex: 1;
 
       .checkbox {
-        appearance: none;
+        position: relative;
+        flex-shrink: 0;
         width: 1.8rem;
         height: 1.8rem;
-        margin-top: 0.2rem;
-        flex-shrink: 0;
-
-        background-color: var(--color-form-checkbox);
         border-radius: 0.5rem;
-        cursor: pointer;
-
-        position: relative;
         transition: all 0.3s ease;
+        appearance: none;
+        margin-top: 0.2rem;
+        background-color: var(--color-form-checkbox);
+        cursor: pointer;
 
         &:checked {
           background-color: var(--color-neutral-100);
 
           &::after {
-            content: '';
             position: absolute;
-            left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%);
-
+            left: 50%;
             width: 1.2rem;
             height: 1.2rem;
-
+            transform: translate(-50%, -50%);
+            content: '';
             background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3L4.5 8.5L2 6' stroke='%23544B46' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: center;
@@ -161,30 +144,29 @@
       }
 
       .consent-label {
+        flex: 1;
         max-width: 45rem;
         font-size: var(--font-size-14);
         font-weight: var(--font-weight-regular);
-        color: var(--color-text-on-dark-subtle);
         line-height: 1.6;
+        color: var(--color-text-on-dark-subtle);
         cursor: pointer;
-        flex: 1;
       }
 
       .error {
         display: block;
         width: 100%;
-
-        margin-left: 2.8rem;
         font-size: var(--font-size-13);
         font-weight: var(--font-weight-regular);
-        color: var(--color-form-error);
         line-height: 1.4;
+        color: var(--color-form-error);
+        margin-left: 2.8rem;
       }
     }
   }
 }
 
-@media (max-width: 1700px) {
+@media (width <= 1700px) {
   .form {
     .footer {
       .consent {
@@ -196,7 +178,7 @@
   }
 }
 
-@media (max-width: 1279px) {
+@media (width <= 1279px) {
   .form {
     .row {
       .field {
@@ -214,13 +196,13 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .form {
     gap: 2rem;
 
     .row {
-      grid-template-columns: 1fr;
       gap: 2rem;
+      grid-template-columns: 1fr;
 
       .field {
         .input {
