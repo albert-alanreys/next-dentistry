@@ -71,7 +71,7 @@
         margin-top: 1rem;
         font-size: var(--font-size-13);
         font-weight: var(--font-weight-regular);
-        color: #ff6b6b;
+        color: var(--color-form-error);
         line-height: 1.4;
       }
     }
@@ -177,7 +177,7 @@
         margin-left: 2.8rem;
         font-size: var(--font-size-13);
         font-weight: var(--font-weight-regular);
-        color: #ff6b6b;
+        color: var(--color-form-error);
         line-height: 1.4;
       }
     }
