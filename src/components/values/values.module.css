@@ -96,7 +96,7 @@
 
   .diamond {
     .media {
-      background-image: url('/values/diamond/bg-1920.svg');
+      background-image: url('/images/values/diamond/bg-1920.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 27.4rem 27.8rem;
@@ -107,7 +107,8 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      background-image: url('/values/ellipse.svg'), url('/values/ellipse.svg');
+      background-image:
+        url('/images/values/ellipse.svg'), url('/images/values/ellipse.svg');
       background-repeat: no-repeat;
       background-position:
         8rem 7rem,
@@ -121,7 +122,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url('/values/diamond/diamond.svg');
+      background-image: url('/images/values/diamond/diamond.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 10rem 10rem;
@@ -130,7 +131,7 @@
 
   .tooth {
     .media {
-      background-image: url('/values/tooth/bg-1920.svg');
+      background-image: url('/images/values/tooth/bg-1920.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 27.4rem 27.8rem;
@@ -141,7 +142,8 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      background-image: url('/values/ellipse.svg'), url('/values/ellipse.svg');
+      background-image:
+        url('/images/values/ellipse.svg'), url('/images/values/ellipse.svg');
       background-repeat: no-repeat;
       background-position:
         15rem 6rem,
@@ -156,7 +158,8 @@
       position: absolute;
       inset: 0;
       background-image:
-        url('/values/tooth/tooth-line.svg'), url('/values/tooth/tooth.svg');
+        url('/images/values/tooth/tooth-line.svg'),
+        url('/images/values/tooth/tooth.svg');
       background-repeat: no-repeat;
       background-position:
         11.5rem 10.5rem,
@@ -169,7 +172,7 @@
 
   .microscope {
     .media {
-      background-image: url('/values/microscope/bg-1920.svg');
+      background-image: url('/images/values/microscope/bg-1920.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 27.4rem 27.8rem;
@@ -180,7 +183,8 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      background-image: url('/values/ellipse.svg'), url('/values/ellipse.svg');
+      background-image:
+        url('/images/values/ellipse.svg'), url('/images/values/ellipse.svg');
       background-repeat: no-repeat;
       background-position:
         7rem 6rem,
@@ -194,7 +198,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url('/values/microscope/microscope.svg');
+      background-image: url('/images/values/microscope/microscope.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 10rem 10rem;
@@ -203,7 +207,7 @@
 
   .bear {
     .media {
-      background-image: url('/values/bear/bg-1920.svg');
+      background-image: url('/images/values/bear/bg-1920.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 27.4rem 27.8rem;
@@ -214,7 +218,8 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      background-image: url('/values/ellipse.svg'), url('/values/ellipse.svg');
+      background-image:
+        url('/images/values/ellipse.svg'), url('/images/values/ellipse.svg');
       background-repeat: no-repeat;
       background-position:
         8rem 8rem,
@@ -228,7 +233,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url('/values/bear/bear.svg');
+      background-image: url('/images/values/bear/bear.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 10rem 10rem;
@@ -295,7 +300,7 @@
     .microscope,
     .bear {
       .media {
-        background-image: url('/values/bg-1280.svg');
+        background-image: url('/images/values/bg-1280.svg');
         background-size: 20rem 24rem;
       }
     }
@@ -408,7 +413,7 @@
         height: 13.7rem;
         margin-left: auto;
         margin-right: auto;
-        background-image: url('/values/bg-768.svg');
+        background-image: url('/images/values/bg-768.svg');
         background-size: cover;
         background-position: center;
       }
@@ -537,7 +542,7 @@
         order: 1;
         max-width: 31rem;
         height: 16rem;
-        background-image: url('/values/bg-375.svg');
+        background-image: url('/images/values/bg-375.svg');
         background-size: cover;
         background-position: center;
       }

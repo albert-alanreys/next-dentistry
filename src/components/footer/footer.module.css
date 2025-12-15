@@ -1,7 +1,7 @@
 .footer {
   min-height: 63.8rem;
   padding: 15rem 0 8rem;
-  background-image: url('/footer/footer-bg-1920.svg');
+  background-image: url('/images/footer/footer-bg-1920.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -67,7 +67,7 @@
   .footer {
     min-height: auto;
     padding: 8rem 0 6rem;
-    background-image: url('/footer/footer-bg-1280.svg');
+    background-image: url('/images/footer/footer-bg-1280.svg');
 
     .content {
       gap: 6rem;
@@ -97,7 +97,7 @@
 @media (width <= 767px) {
   .footer {
     padding: 6rem 0 4rem;
-    background-image: url('/footer/footer-bg-768.svg');
+    background-image: url('/images/footer/footer-bg-768.svg');
 
     .content {
       gap: 3.5rem;

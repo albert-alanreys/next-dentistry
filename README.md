@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next Dentistry
 
-## Getting Started
+[Test task](https://www.notion.so/frontend-1-2c8df3e94601808299baf24ede7f7bf6) implementation: responsive landing page for a dentistry clinic with contact form and news section.
 
-First, run the development server:
+> Modern landing page built with **Next.js**, **React**, **TypeScript**, and **CSS Modules**.
+
+---
+
+## 🧰 Tech Stack
+
+**Core:**
+
+- **Next.js 16** — React framework with App Router
+- **React 19** — UI library
+- **TypeScript** — type-safe JavaScript
+
+**UI Components & Styling:**
+
+- **CSS Modules** — modular scoped styles
+- **Swiper** — carousel/slider component
+- **Headless UI** — unstyled accessible UI components
+
+**Form Handling:**
+
+- **React Hook Form** — form validation and submission
+- **React IMask** — phone number input masking
+- **React Hot Toast** — toast notifications
+
+**Development Tools:**
+
+- **ESLint** — JavaScript linting
+- **Stylelint** — CSS linting
+- **Prettier + @trivago/prettier-plugin-sort-imports** — code formatting
+
+---
+
+## 📸 Screenshots
+
+#### Header & Values Section
+
+![Header and values](public/screenshots/header-values.png)
+
+#### News Section
+
+![News section](public/screenshots/news.png)
+
+#### Contact Form
+
+![Contact form](public/screenshots/form.png)
+
+---
+
+## ⚙️ Development
+
+This project uses **Yarn** and requires **Node.js v20+**.
+
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build production version:
 
-## Learn More
+```bash
+yarn build
+yarn start
+```
 
-To learn more about Next.js, take a look at the following resources:
+Run linters:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn lint
+yarn lint:styles
+yarn lint:styles:fix
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📝 Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Fully responsive design matching Figma mockup
+- Adaptive header with mobile hamburger menu
+- Interactive news carousel with **Swiper**
+- Contact form with real-time validation
+- AJAX form submission with success/error notifications
+- SSR-fetched news section from public mock API
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+**License:** MIT  
+**Author:** [Albert Alan-Reys](https://github.com/albert-alanreys)

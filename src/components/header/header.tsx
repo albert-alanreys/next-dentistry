@@ -24,7 +24,7 @@ export function Header() {
             <div className={styles['top-inner']}>
               <button className={styles.accessibility}>
                 <Image
-                  src='/header/glasses.svg'
+                  src='/images/header/glasses.svg'
                   alt=''
                   width={26}
                   height={26}
@@ -33,7 +33,12 @@ export function Header() {
               </button>
 
               <a href='#' className={styles['max-link']}>
-                <Image src='/header/max.svg' alt='MAX' width={21} height={21} />
+                <Image
+                  src='/images/header/max.svg'
+                  alt='MAX'
+                  width={21}
+                  height={21}
+                />
                 <span>Канал MAX</span>
               </a>
             </div>
@@ -45,7 +50,7 @@ export function Header() {
             <div className={styles['main-inner']}>
               <div className={styles.left}>
                 <Image
-                  src='/header/logo-big.svg'
+                  src='/images/header/logo-big.svg'
                   alt='Логотип клиники'
                   width={260}
                   height={42}
@@ -57,7 +62,7 @@ export function Header() {
                   aria-label='Открыть меню'
                 >
                   <Image
-                    src='/header/hamburger-big.svg'
+                    src='/images/header/hamburger-big.svg'
                     alt=''
                     width={28}
                     height={28}
@@ -67,7 +72,7 @@ export function Header() {
                 <div className={styles['appointment-mobile']}>
                   <button className={styles.appointment}>
                     <Image
-                      src='/header/mail.svg'
+                      src='/images/header/mail.svg'
                       alt=''
                       width={16}
                       height={11}
@@ -82,7 +87,7 @@ export function Header() {
                   aria-label='Открыть меню'
                 >
                   <Image
-                    src='/header/hamburger-small.svg'
+                    src='/images/header/hamburger-small.svg'
                     alt=''
                     width={24}
                     height={24}
@@ -95,7 +100,7 @@ export function Header() {
                       <a href='#'>
                         Услуги
                         <Image
-                          src='/header/down-arrow.svg'
+                          src='/images/header/down-arrow.svg'
                           alt=''
                           width={12}
                           height={12}
@@ -107,7 +112,7 @@ export function Header() {
                       <a href='#'>
                         О клинике
                         <Image
-                          src='/header/down-arrow.svg'
+                          src='/images/header/down-arrow.svg'
                           alt=''
                           width={12}
                           height={12}
@@ -141,7 +146,7 @@ export function Header() {
                 </a>
 
                 <Image
-                  src='/header/separator.svg'
+                  src='/images/header/separator.svg'
                   alt=''
                   width={2}
                   height={24}
@@ -149,7 +154,7 @@ export function Header() {
 
                 <button className={styles.search}>
                   <Image
-                    src='/header/loupe.svg'
+                    src='/images/header/loupe.svg'
                     alt='Поиск'
                     width={20}
                     height={20}
@@ -157,7 +162,12 @@ export function Header() {
                 </button>
 
                 <button className={styles.appointment}>
-                  <Image src='/header/mail.svg' alt='' width={16} height={11} />
+                  <Image
+                    src='/images/header/mail.svg'
+                    alt=''
+                    width={16}
+                    height={11}
+                  />
                   <span>Записаться</span>
                 </button>
               </div>
@@ -196,7 +206,7 @@ export function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Image
-                    src='/header/close.svg'
+                    src='/images/header/close.svg'
                     alt=''
                     width={20}
                     height={20}

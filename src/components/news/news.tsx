@@ -78,7 +78,7 @@ export const News = ({ items, totalCount = 10 }: NewsProps) => {
             className={styles['scroll-button']}
             aria-label='Следующий слайд'
           >
-            <img src='/scroll-button.svg' alt='' />
+            <img src='/images/scroll-button.svg' alt='' />
           </button>
         </div>
 
