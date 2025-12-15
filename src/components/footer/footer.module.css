@@ -1,0 +1,49 @@
+.footer {
+  min-height: 63.8rem;
+  padding: 15rem 0 8rem;
+
+  background-image: url('/footer-bg-1920.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--color-background-dark);
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    align-items: start;
+
+    > .left {
+      display: flex;
+      flex-direction: column;
+      gap: 12.6rem;
+
+      > .title {
+        max-width: 40rem;
+        font-size: var(--font-size-46);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-text-on-dark);
+        line-height: 1.4;
+
+        > span {
+          display: block;
+        }
+      }
+
+      > .description {
+        max-width: 40rem;
+        text-wrap: balance;
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-medium);
+        color: var(--color-text-on-dark-muted);
+        line-height: 1.7;
+      }
+    }
+
+    > .right {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

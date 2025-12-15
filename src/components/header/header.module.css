@@ -100,6 +100,8 @@
           background-color: var(--color-btn-primary-bg);
           border-radius: 6rem;
 
+          transition: background-color 0.3s ease;
+
           &:hover {
             background-color: var(--color-btn-primary-hover);
           }

@@ -1,0 +1,185 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+
+  > .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    > .field {
+      display: flex;
+      flex-direction: column;
+
+      > .label {
+        position: relative;
+        top: 0.5rem;
+        font-size: var(--font-size-14);
+        font-weight: var(--font-weight-medium);
+        color: var(--color-form-label);
+        line-height: 1.26;
+      }
+
+      > .input {
+        width: 100%;
+        padding: 2rem 0;
+
+        background-color: var(--color-form-background);
+        border: none;
+        border-bottom: 1px solid var(--color-form-border-default);
+
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-medium);
+        color: var(--color-text-on-dark);
+        line-height: 1.26;
+
+        transition: border-color 0.3s ease;
+
+        &::placeholder {
+          color: var(--color-form-placeholder);
+        }
+
+        &:hover,
+        &:focus {
+          outline: none;
+          border-bottom-color: var(--color-form-border-hover);
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0 1000px var(--color-form-background) inset !important;
+          -webkit-text-fill-color: var(--color-text-on-dark) !important;
+          transition: background-color 5000s ease-in-out 0s;
+          caret-color: var(--color-text-on-dark);
+        }
+
+        &:-moz-autofill,
+        &:-moz-autofill:hover,
+        &:-moz-autofill:focus,
+        &:-moz-autofill:active {
+          background-color: var(--color-form-background) !important;
+          color: var(--color-text-on-dark) !important;
+        }
+      }
+
+      > .error {
+        display: block;
+        margin-top: 1rem;
+        font-size: 1.3rem;
+        font-weight: var(--font-weight-regular);
+        color: #ff6b6b;
+        line-height: 1.4;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  > .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4.5rem;
+    margin-top: 1.4rem;
+
+    > .submit {
+      padding: 1.6rem 3.2rem;
+      flex-shrink: 0;
+
+      width: 20rem;
+      height: 6.4rem;
+
+      background-color: var(--color-neutral-100);
+      border: none;
+      border-radius: 6rem;
+      cursor: pointer;
+
+      font-size: var(--font-size-15);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-primary-700);
+      line-height: 1.5;
+      white-space: nowrap;
+
+      transition: background-color 0.3s ease;
+
+      &:hover:not(:disabled) {
+        background-color: var(--color-neutral-200);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+
+    > .consent {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 1rem;
+      flex: 1;
+
+      > .checkbox {
+        appearance: none;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-top: 0.2rem;
+        flex-shrink: 0;
+
+        background-color: var(--color-form-checkbox);
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        position: relative;
+        transition: all 0.3s ease;
+
+        &:checked::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+
+          width: 1.2rem;
+          height: 1.2rem;
+
+          background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3L4.5 8.5L2 6' stroke='%23544B46' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+
+        &:checked {
+          background-color: var(--color-neutral-100);
+        }
+      }
+
+      > .consent-label {
+        max-width: 45rem;
+        font-size: var(--font-size-14);
+        font-weight: var(--font-weight-regular);
+        color: var(--color-text-on-dark-subtle);
+        line-height: 1.6;
+        cursor: pointer;
+        flex: 1;
+      }
+
+      > .error {
+        display: block;
+        width: 100%;
+
+        margin-left: 2.8rem;
+        font-size: 1.3rem;
+        font-weight: var(--font-weight-regular);
+        color: #ff6b6b;
+        line-height: 1.4;
+      }
+    }
+  }
+}

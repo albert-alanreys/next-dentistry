@@ -45,11 +45,7 @@
   /* Buttons */
   --color-btn-primary-bg: var(--color-primary-700);
   --color-btn-primary-text: var(--color-neutral-100);
-  --color-btn-primary-hover: color-mix(
-    in srgb,
-    var(--color-primary-700) 90%,
-    black
-  );
+  --color-btn-primary-hover: var(--color-primary-800);
 
   --color-btn-secondary-bg: var(--color-neutral-100);
   --color-btn-secondary-text: #3a3429;
@@ -65,8 +61,10 @@
 
   /* Form Elements */
   --color-form-label: rgba(223, 222, 221, 0.33);
+  --color-form-checkbox: rgba(255, 255, 255, 0.15);
   --color-form-placeholder: #dfdedd;
-  --color-form-border: rgba(255, 255, 255, 0.3);
+  --color-form-border-default: rgba(255, 255, 255, 0.3);
+  --color-form-border-hover: rgba(255, 255, 255, 0.7);
   --color-form-background: transparent;
 
   /* Shadows */
@@ -90,16 +88,6 @@
   --font-size-20: 2rem;
   --font-size-24: 2.4rem;
   --font-size-46: 4.6rem;
-
-  /* Line Heights */
-  --line-height-tight: 1.2;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.6;
-
-  /* Letter Spacing */
-  --letter-spacing-tight: -0.01em;
-  --letter-spacing-normal: 0;
-  --letter-spacing-wide: 0.01em;
 
   /* ============ BREAKPOINTS ============ */
   --bp-xxl: 1920px;

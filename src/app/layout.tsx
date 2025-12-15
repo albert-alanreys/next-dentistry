@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Manrope } from 'next/font/google';
+import { Toaster } from 'react-hot-toast';
 
 import '../styles/globals.css';
 
-import { Header } from '@/components';
+import { Footer, Header } from '@/components';
 
 const manrope = Manrope({
   subsets: ['latin', 'cyrillic'],
@@ -31,6 +32,32 @@ export default function RootLayout({
       <body className='antialiased'>
         <Header />
         <main>{children}</main>
+        <Footer />
+        <Toaster
+          position='top-right'
+          toastOptions={{
+            duration: 5000,
+            style: {
+              background: '#363636',
+              color: '#fff',
+              fontSize: '1.4rem',
+              padding: '1.6rem',
+              borderRadius: '0.4rem',
+            },
+            success: {
+              iconTheme: {
+                primary: '#b2a487',
+                secondary: '#fff',
+              },
+            },
+            error: {
+              iconTheme: {
+                primary: '#ff6b6b',
+                secondary: '#fff',
+              },
+            },
+          }}
+        />
       </body>
     </html>
   );
